@@ -1,0 +1,11 @@
+- name: launch a compute instance
+  hosts: localhost
+  tasks:
+  - name: launch an instance
+    os_server:
+      state: present
+      name: vm1-ansible
+      image: ea930841-ca66-475e-ae64-a0b3d540eb0e
+      key_name: bobbus
+      timeout: 200
+      flavor: 3
